@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+.container{
+    /* border: 1px solid black; */
+    height: 200px;
+    padding-top: 100px;
+}
+.notice{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn{
+    margin: 0 auto;
+    text-align: center;
+}
+.btn__child{
+    width: 70px;
+    background: #10B981;
+    color: white;
+    border-radius: 3px;
+}
+.btn__child:hover{
+    background:#167c5a ;
+}

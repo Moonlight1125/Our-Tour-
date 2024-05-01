@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 9;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: delete 1s linear forwards;
+}
+.circle__size{
+    width: 220px;
+    height: 220px;
+    /* border: 1px solid black; */
+    transform: rotate(180deg);
+}
+.circle__fake{
+    visibility: visible;
+    fill: none;
+    stroke: gray;
+    stroke-width: 8px;
+    animation: load 1s linear forwards;
+}
+     /* stroke-dasharray:10;の意味
+       最初からなぞって10pxまでいっ
+       たら、そこから間隔を10px。
+       つまり、円のアニメーション
+       をつくるには2(pi)rなぞった
+       ところから間隔が空けばいい
+       dash-aray:627.3035278320312
+    */
+    /* 
+    flex:1;とは？
+    */
+.circle{
+    visibility: visible;
+    fill: none;
+    stroke: aqua;
+    stroke-width: 8px;
+    stroke-dasharray:627.3035278320312;
+    stroke-dashoffset:627.3035278320312;
+    animation: load 1s linear forwards;
+}
+@keyframes load {
+    0%{
+        visibility: visible;
+        stroke-dashoffset: 626;
+    }
+    100%{
+        visibility: hidden;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes delete {
+    0%{
+        display: flex;
+    }
+    100%{
+        display: none;
+    }
+}
